@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl"; //eslint-disable-line import/no-webpack-loader-syntax
 import "../css/mapa.css";
+import "../style.css";
 
 mapboxgl.accessToken =
   "pk.eyJ1Ijoibm9zc3Q5OSIsImEiOiJjbG5sdnpuNW4wdHk0Mmttb2JvdHZvM2tmIn0.7haFs7K8-wNkUetaC2rQxQ";
@@ -9,7 +10,7 @@ export default function MapSection() {
   const map = useRef(null);
   const [lng, setLng] = useState(-70.6695);
   const [lat, setLat] = useState(-33.4484);
-  const [zoom, setZoom] = useState(8);
+  const [zoom, setZoom] = useState(13);
 
   //[-70.6695, -33.4484]
 
@@ -32,7 +33,8 @@ export default function MapSection() {
 
   return (
     <>
-      <section className="row">
+      <section className="row mySectionMapa bg-light">
+        <h1 className="text-center">Mapa Interactivo</h1>
         <div className="col-md-6"></div>
         <div className="col-md-5">
           <div className="sidebar">
