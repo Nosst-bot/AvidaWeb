@@ -6,10 +6,9 @@ import Comunidad from './components/Comunidad'
 function App() {
   return (
     <>
-    <MapSection />
-    <Hero />
     <Navbar></Navbar>
-    <Comunidad />
+    <Hero />
+    <MapSection />
     </>
   )
 }
