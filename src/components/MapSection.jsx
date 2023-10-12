@@ -33,7 +33,7 @@ export default function MapSection() {
 
   return (
     <>
-      <section className="row mySectionMapa bg-light">
+      <section className="row mySectionMapa bg-body-secondary" id="mapa">
         <h1 className="text-center">Mapa Interactivo</h1>
         <div className="col-md-6"></div>
         <div className="col-md-5">

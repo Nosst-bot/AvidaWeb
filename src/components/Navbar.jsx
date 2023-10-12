@@ -1,9 +1,13 @@
 import Avida from '/src/assets/react.svg'
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
+
+  const navigate = useNavigate();
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light navbar-custom">
+      <nav className="navbar navbar-expand-lg navbar-light navbar-custom bg-light">
         <div className='container'> 
         <a className="navbar-brand" href="#">
           <img src={Avida} alt="Logo" />
@@ -22,12 +26,12 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mx-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="#">
+              <a className="nav-link" onClick={()=> navigate("/")} href="#">
                 Inicio
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#mapa">
+              <a className="nav-link"  href="#mapa">
                 Mapa
               </a>
             </li>
@@ -46,12 +50,20 @@ export default function Navbar() {
                 Enciclopedia
               </a>
             </li>
-          </ul>
-          <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link" href="#" id="myAccountBtn">
                 Mi cuenta
               </a>
+            </li>
+          </ul>
+          <ul className="navbar-nav gap-3">
+          <li className="nav-item">
+              <a className="nav-link" onClick={() => navigate("/login")} href="#" id="myAccountBtn">
+                Iniciar Sesión
+              </a>
+            </li>
+            <li className='nav-item'>
+              <button className='btn btn-outline-primary'>Registrarse</button>
             </li>
           </ul>
         </div>

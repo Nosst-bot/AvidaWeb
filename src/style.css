@@ -1,7 +1,12 @@
 .mySectionMapa {
     min-height: 100vh;
+    max-width: 100%;
 }
 
 .mySection {
     min-height: 100vh;
+}
+
+.myfooter {
+    background: #000;
 }
