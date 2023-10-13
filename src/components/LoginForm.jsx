@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 export default function LoginForm() {
   return (
     <>
-      <Navbar />
+      <Navbar type={"user"}/>
       <section className="bg-body-tertiary d-flex justify-content-center align-items-center min-vh-100">
         <div className="card mb-5">
           <div className="row g-0 gap-3">

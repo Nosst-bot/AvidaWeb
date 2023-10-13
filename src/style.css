@@ -10,3 +10,11 @@
 .myfooter {
     background: #000;
 }
+
+#nosotros {
+    background-image: url('/src/assets/enciclo.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}

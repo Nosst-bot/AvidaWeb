@@ -1,13 +1,14 @@
 import Avida from '/src/assets/react.svg'
 import { useNavigate } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar({type}) {
 
   const navigate = useNavigate();
 
-  return (
+
+  if (type === "user") {return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light navbar-custom bg-light">
+      <nav className="sticky-top navbar navbar-expand-lg navbar-light navbar-custom bg-light">
         <div className='container'> 
         <a className="navbar-brand" href="#">
           <img src={Avida} alt="Logo" />
@@ -24,7 +25,7 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav mx-auto">
+          <ul className="navbar-nav mx-auto gap-2">
             <li className="nav-item active">
               <a className="nav-link" onClick={()=> navigate("/")} href="#">
                 Inicio
@@ -70,5 +71,9 @@ export default function Navbar() {
         </div>
       </nav>
     </>
-  );
+  )}
+
+  if (type === "admin") {
+    
+  }
 }
