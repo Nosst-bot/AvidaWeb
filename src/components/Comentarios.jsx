@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-export default function Usuarios() {
+export default function Comentarios() {
   const [comentarios, setComentarios] = useState([]);
   const navigator = useNavigate();
 
@@ -11,7 +11,7 @@ export default function Usuarios() {
   }, []);
 
   const loadUsers = async () => {
-    const resultado = await axios.get("http://localhost:8005/listar");
+    const resultado = await axios.get('http://localhost:8005/listar');
     setComentarios(resultado.data);
   };
 
@@ -30,14 +30,15 @@ export default function Usuarios() {
         </thead>
         <tbody>
           {comentarios.map((comentario, index) => (
-            <tr>
-              <th scope="row" key={index}>{index + 1}</th>
+            <tr key={comentario.id}>
+              <th scope="row" key={index}>
+                {index + 1}
+              </th>
               <td>{comentario.id}</td>
               <td>{comentario.texto}</td>
               <td>{comentario.createAt}</td>
             </tr>
-          ))
-          }
+          ))}
         </tbody>
       </table>
     </div>
